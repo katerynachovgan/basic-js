@@ -4,8 +4,9 @@ module.exports = function createDreamTeam(members) {
   let result = []
   if (Array.isArray(members)) {
     members.forEach((element) => {
-      typeof(element) === 'string' && result.push(element.trim()[0].toUpperCase());
-    }
+      if(typeof(element) === 'string') { 
+        result.push(element.trim()[0].toUpperCase());
+    }}
     )};
     return result.sort().join('')
 
