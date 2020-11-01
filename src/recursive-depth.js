@@ -6,13 +6,16 @@ module.exports = class DepthCalculator {
       return 1;
     }
     if (arr.length === 1 && typeof(arr[0]) === 'number') return 1;
-    
+    let cDepth = 1; 
+
     for (let i = 0; i < arr.length; i++){
+      let count = 1;
       if (Array.isArray(arr[i])){
-        // console.log(arr[i]);
-        // console.log(Array.isArray(arr[i]));
-        return calculateDepth(arr[i]) + 1;
+        count += this.calculateDepth(arr[i]);
+        
+        if (count > cDepth) cDepth = count;
       }
     }
+    return cDepth;
   }
 };

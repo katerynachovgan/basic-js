@@ -16,23 +16,18 @@ module.exports = function repeater( str, options ) {
   // if (repeatTimes) 
   let rt = options.repeatTimes;
   if (rt === undefined) rt = 1; 
-  console.log(rt);
 
   let aRT = options.additionRepeatTimes;
   if (aRT === undefined) aRT = 1; 
-  console.log(aRT);
 
   let sep = options.separator;
    if (sep === undefined) sep = '+'; 
-  console.log(sep);
 
   let addsep = options.additionSeparator;
   if(addsep === undefined) addsep = '|';
-  console.log(addsep);
 
   let add = options.addition;
   if (add === undefined) add = '';
-  console.log(add);
   
   let result = '';
 
